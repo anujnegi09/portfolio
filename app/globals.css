@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: lab(3.69541% -.360243 -1.35138);
+  --foreground: lab(95.3562% -.55331 -1.78927);
+
+  --card: lab(7.21672% -.744574 -2.77485);
+  --card-foreground: lab(95.3562% -.55331 -1.78927);
+
+  --secondary: lab(9.51012% -.812642 -2.82544);
+  --secondary-foreground: lab(95.3562% -.55331 -1.78927);
+
+  --muted: lab(9.51012% -.812642 -2.82544);
+  --muted-foreground: lab(65.1932% -.871062 -2.85484);
+
+  --destructive: lab(57.1752% 69.5963 43.0458);
+
+  --border: lab(16.4678% -1.01776 -3.53267);
+  --input: lab(11.8268% -.999987 -3.52463);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
 }
